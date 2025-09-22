@@ -1,0 +1,143 @@
+﻿.position1{
+
+    position: absolute;
+    right: 3px;
+    top: 0px;
+    
+}
+
+
+
+.ImageButtondefine {
+    
+    
+    width: 150px; /* 固定框寬 */
+    height: 120px; /* 固定框高 */
+    display: flex; /* 使用 flex 讓圖片置中 */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* 防止圖片超出容器 */
+    background: #f0f0f0; /* 預設背景，可省略 */
+}
+
+.name {
+    top: 300px;
+    left: 300px;
+}
+.tabledefine {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 5px solid black;
+    box-sizing :content-box  ;
+}
+.femaleImageButton {
+    width: 20%;
+    height: 20%;
+}
+.personalImage {
+    width: 180px; /* 圖片框寬度 */
+    height: 220px; /* 圖片框高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* 超出的部分裁掉 */
+    background: #eee;
+}
+.BackGroundDefine {
+    position: fixed;
+    width: 100%;
+    height: 100% ;
+    background-size:cover; /* 讓圖片覆蓋整個容器 */
+    background-repeat: no-repeat; /* 防止圖片重複 */
+}
+.overlay {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.7); /* 白色，80%不透明度 */  
+    border-radius: 5px; /*圓角效果 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* 陰影效果 */
+}
+.March7_Table_left {
+
+   
+    background-color: rgba(221, 240, 250, 0.85); /*左方配色*/
+    width: 15px;
+    text-align: center;
+}
+.March7_Table_right {
+
+    background-color: rgb(210, 216, 220, 0.85);
+   
+}
+.March7_Sum_color{
+    text-decoration-color:red;
+}
+.March7_misson {
+    color: blueviolet;
+    background-color: lightgray;
+    width: 300px;
+    font-size: 20px;
+}
+.EveryChaList {
+    border-collapse: collapse ;
+    border-width: 2px;
+    background-color: rgb(210, 216, 220, 0.85) ;
+    border: 2px solid black ; 
+}
+/* 不讓 DataList 的 table 嘗試自己拉寬拉高 */
+#DataList1 {
+    table-layout: fixed;
+    width:auto
+}
+
+    #DataList1 td {
+        padding: 6px;
+        vertical-align: top;
+    }
+
+/* 固定卡片尺寸，內容再大也不撐開 */
+.card {
+    width: 220px;
+    height: 280px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 4px;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin: 6px 0 4px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+/* 固定圖片展示框：所有圖片都只能在這框裡排版 */
+.img-box {
+    width: 180px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* 再大也不讓超出 */
+    background: #eee;
+}
+
+/* 圖片填滿框，以 contain 等比例縮放 */
+.img-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block; /* 去除 inline-img 的基線空隙 */
+}
+
+
+
+
+
+

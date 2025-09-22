@@ -5,18 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Allmap : System.Web.UI.Page
+public partial class Belloberg : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
-    
 
-
-    protected void EveryMap_Command(object sender, CommandEventArgs e)
+    protected void LinkOfPersonal_Command(object sender, CommandEventArgs e)
     {
-        string MapUrl = e.CommandArgument.ToString();
-        Response.Redirect(MapUrl);
+        string url = e.CommandArgument.ToString();
+        Response.Redirect(url);
     }
 }

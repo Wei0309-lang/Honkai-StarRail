@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Allmap.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Allmap.aspx.cs" Inherits="Allmap" %>
 
 <!DOCTYPE html>
 
@@ -16,15 +16,19 @@
             <asp:SqlDataSource ID="SqlDataSourceOfMap" runat="server" ConnectionString='<%$ ConnectionStrings:HonkaiConnectionString %>'
                 SelectCommand="SELECT [planet_Name] , [photo] ,[goto] FROM [Planet]" />
 
+
         </div>
+
+        <div  style = "background-image:url('https://i.meee.com.tw/JetgN4e.jpg') ;  top:0px ;" class = "BackGroundDefine" />
+        <div class="overlay" style ="position:relative ; width:1200px ; height:2000px">
         <div style =" font-size:40px ; color:blue">
             崩壞星穹鐵道地圖:
         </div>
-        <div style ="position:center ; height:550px; width:1200px"  >
+        <div style ="position:center ; height:550px; width:1100px"  >
             <asp:DataList runat="server" DataSourceID="SqlDataSourceOfMap"
-                 GridLines="Horizontal" RepeatColumns="3"
+                 GridLines="Horizontal" RepeatColumns="2"
                  Width="100%" Height="100%" HorizontalAlign="Center" CssClass="card"
-                 CellPadding="15">
+                 CellPadding="15" BorderWidth="5">
          
                 <ItemTemplate>
                     <asp:LinkButton runat="server" ID="EveryMap"
@@ -42,7 +46,7 @@
                 </ItemTemplate>
             </asp:DataList>
         </div>
-                        
+        </div>                
 
     </form>
 </body>

@@ -47,9 +47,10 @@
 .BackGroundDefine {
     position: fixed;
     width: 100%;
-    height: 100% ;
-    background-size:cover; /* 讓圖片覆蓋整個容器 */
+    height: 100%;
+    background-size: cover; /* 讓圖片覆蓋整個容器 */
     background-repeat: no-repeat; /* 防止圖片重複 */
+    z-index: -1; /* 確保背景在最底層 */
 }
 .overlay {
     margin: 20px auto;

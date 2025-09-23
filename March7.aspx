@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
      <link href ="StyleSheet.css" rel="stylesheet" type="text/css" />
-    <title>March7</title>
+    <title> March7 </title>
 </head>
 <body>
       <div style="position:absolute ; left:550px ; top:1100px">

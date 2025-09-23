@@ -6,10 +6,10 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
-    <title></title>
+    <title> Character of Lofu </title>
 </head>
 <body>
-    <div style =' background-image:url(https://i.meee.com.tw/UUvrkt8.jpg)' class="BackGroundDefine">  
+    <div style =' background-image:url(https://drive.google.com/file/d/1y8WFDCmpuviYBxhmXNL98-4JrrdTn8hB/view?usp=sharing.jpg)' class="BackGroundDefine">  
         </div>
     <form id="form1" runat="server">
     

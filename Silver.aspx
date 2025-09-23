@@ -1,15 +1,15 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Kafka.aspx.cs" Inherits="Kafka" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Silver.aspx.cs" Inherits="Silver" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="StyleSheet.css" rel="stylesheet" type="text/css" />
-    <title> Kafka </title>
+<link href="StyleSheet.css" type="text/css" rel="stylesheet" />
+    <title> Silver </title>
 </head>
 <body>
-      <div style="position:absolute ; left:550px ; top:1100px">
+          <div style="position:absolute ; left:550px ; top:1100px">
       
      
 
@@ -348,6 +348,7 @@
                 </table>
             </ItemTemplate>
       </asp:FormView>
+
   </div>
     
                  
@@ -359,6 +360,5 @@
       
        </div>
     </form>
-        
 </body>
 </html>

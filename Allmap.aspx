@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title> 所有地圖 </title>
+    <title> Allmap </title>
     <link href ="StyleSheet.css" rel="stylesheet" type="text/css" />
 
 </head>

@@ -17,14 +17,14 @@
           SelectCommand="SELECT [Name],[url],[pc],[attribute] FROM [character] WHERE [NAME] = @Name" >
 
           <SelectParameters>
-              <asp:Parameter DefaultValue="卡芙卡" Name="Name"></asp:Parameter>
+              <asp:Parameter DefaultValue="銀狼" Name="Name"></asp:Parameter>
           </SelectParameters>
       </asp:SqlDataSource>
 
       
   </div>
     
-    <div  style = "background-image:url('https://i.imgur.com/khDMhQF.jpeg') ;  top:0px ;" class = "BackGroundDefine">
+    <div  style = "background-image:url('img/silverBackground.jpg') ;  top:0px ;" class = "BackGroundDefine">
     </div>
     
     
@@ -37,7 +37,7 @@
         <div style =" width:500px "  >
 
             <header style="font-size : 30px">
-                <b>卡芙卡</b>
+                <b>銀狼</b>
             </header>
             <asp:RadioButtonList runat="server" ID="check" RepeatDirection="Horizontal" 
                 OnSelectedIndexChanged="check_SelectedIndexChanged" 
@@ -64,22 +64,12 @@
              </Triggers>
          </asp:UpdatePanel> 
             
-            <p>古靈精怪的少女，熱衷於這個年紀的女孩子應當「熱衷」的所有事。
+            <p>「星核獵手」的成員，駭客高手。</p>
+     
+            <p>將宇宙視為大型沉浸式模擬遊戲，玩樂其中。</p>
 
-            </p>
-            <p>
-                隨身不離照相機，堅信只要自己跟著列車，終有一天能拍下與過去有關的照片。
-            </p>
-
-            <p>
-                被列車發現時，她正被封在一塊漂流的恆冰中。
-            </p>
-            <p>
-                少女甦醒後，卻發現自己對身世與過往都一無所知。短暫的消沉之後，她決定以重獲新生的日期為自己命名。
-            </p>
-            <p style ="color:red">
-                這一天，三月七「誕生」了。
-            </p>
+            <p>掌握了能夠修改現實參數的「乙太編輯」。</p>
+           
             <p>-----------------------------------------------------------------------------------</p>
         <header style = "text-align:center ; font-size:25px">
             <strong>角色相關經歷</strong>
@@ -88,10 +78,19 @@
             <details>
                 
                 <summary class ="March7_misson">
-                    1.0版本-通往群星的軌道
+                    早期經歷
                 </summary>
-                    
-                <p style="color:peru">開拓任務「今天是昨天的明天」</p>
+                星核獵手團隊中最後加入的成員。
+
+曾與            螺絲咕姆在信息領域進行了交鋒，銀狼沒有攻破螺絲咕姆的防禦，螺絲咕姆則沒有阻止銀狼離開。
+                <br />銀狼方面認為自己初嘗失敗。
+                    </details>
+
+                <details>
+                    <summary>
+                        <p style="color:peru">開拓任務「今天是昨天的明天」</p>
+                    </summary>
+
             星穹列車暫時停靠於空間站「<a href="https://wiki.hoyolab.com/pc/hsr/entry/951?lang=zh-tw">黑塔</a>」期間，空
                 間站遭到了反物質軍團的襲擊。三月和丹恆協助空間站人員撤退至安全區域期間，發現了昏迷的星核容器，而這位容器
                 日後將成為星穹列車上的新成員「開拓者」。
@@ -206,49 +205,21 @@
 
  <asp:FormView runat="server" DataSourceID="SqlDataSource1" >
     <ItemTemplate>
-        <table runat="server" id = "Table_March7"    style=" width:310px; border :1px ;  " >
-            <tr>
-                 <td style="position:center">
-
-                     <asp:Button id="March7_1" runat="server" class= "March7_Table_left"  
-                          OnClick="March7_1_Onclick" Text="三月七-存護"
-                          style="width : 100px"/> 
-                     
-                  </td>
-                  <td style="position:center">
-                            
-                       <asp:Button id="March7_2" runat="server" class="March7_Table_left"  
-                            OnClick="March7_2_Onclick" Text="三月七-巡獵"
-                            style="width : 100px"/>
-                                     
-                  </td>
-
-          </tr>
+        <table runat="server" id = "Table_March7"    style=" width:300px; border :1px ;  " >
+           
           <tr >
-               <td colspan = "2" style =" height:150px">
-                   <asp:UpdatePanel runat="server" UpdateMode="conditional">
+               <td colspan = "2" style =" height:300px ">
 
-                        <ContentTemplate> 
+                          <asp:Image id="img_silver" runat="server"  ImageUrl="~/img/Silver.png" class="personalImage" />
 
-                          <asp:Image id="img_37" runat="server" ImageUrl = "https://i.imgur.com/T0uEVOJ.jpeg" class="personalImage" />
-                                    
-                        </ContentTemplate>
-
-                                <Triggers>
-                                     <asp:AsyncPostBackTrigger ControlID="March7_1" EventName="Click" />
-                                     <asp:AsyncPostBackTrigger ControlID="March7_2" EventName="Click" />
-                                </Triggers>
-
-                       </asp:UpdatePanel>
-
-             </td>
+                </td>
         </tr>
         <tr>
 
              <th colspan="2" style="text-align:center">
                              基本訊息:
                         </th>
-             </tr>
+        </tr>
              <tr>
                  <td class = "March7_Table_left">
 
@@ -256,7 +227,7 @@
                  </td>
                  <td class="March7_Table_right">
 
-                     三月七
+                     銀狼
                  </td>
             </tr>
             <tr>
@@ -298,10 +269,10 @@
                   配音:
               </td>
               <td class="March7_Table_right">
-                   <a target="_blank" href ="https://zh.moegirl.tw/%E8%AF%BA%E4%BA%9A(%E9%85%8D%E9%9F%B3%E6%BC%94%E5%91%98) " >諾亞（漢語)</a><br />          
-                   <a target="_blank" href="https://zh.wikipedia.org/zh-tw/%E5%B0%8F%E5%80%89%E5%94%AF">小倉唯（日語）</a><br />                          
-                   <a target="_blank" href = "https://en.wikipedia.org/wiki/Skyler_Davenport">Skyler Davenport（英語)</a><br />                        
-                     鄭惠援（韓語)<br /> 
+                   <a target="_blank" href ="https://zh.moegirl.org.cn/Hanser " >Hanser（漢語)</a><br />          
+                   <a target="_blank" href="https://zh.moegirl.org.cn/%E9%98%BF%E6%BE%84%E4%BD%B3%E5%A5%88">阿城佳奈（日語）</a><br />                          
+                   <a> Melissa Fahn（英語)</a><br />                        
+                     張美（韓語)<br /> 
               </td>
       </tr>
       <tr>
@@ -309,7 +280,7 @@
               所屬團體:
           </td>
           <td class="March7_Table_right">
-               <a href="https://zh.moegirl.tw/%E6%98%9F%E7%A9%B9%E5%88%97%E8%BD%A6">星穹列車</a>
+               <a href="https://honkai-star-rail.fandom.com/zh/wiki/%E6%98%9F%E6%A0%B8%E7%8C%8E%E6%89%8B?variant=zh-tw">星核獵手</a>
           </td>
       </tr>
 </table>
@@ -326,10 +297,11 @@
                         </td>
                     
                         <td class="March7_Table_right" colspan = "2" style="height:50px ">                        
-                                <iframe   style="width:100% ; height:100% ;
-                                    visibility:hidden" ; onload="this.style.visibility = 'visible' ; "
-                                     src="https://drive.google.com/file/d/1Kdnm4XnSrIKH2G9RZTHBl2xz8-sjneBb/preview?usp=sharing">   
-                                </iframe>                             
+                              
+                            <audio controls="controls" preload="none" >
+                                <source src="https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2024/04/08/2e0b0888bf0c0760fd10665e77222b83_601948595534035033.mp3">
+
+                            </audio>
                         </td>
                     </tr>
                      <tr>
@@ -340,9 +312,10 @@
                          </td>
                          <td class="March7_Table_right" style="height:50px" colspan = "2">
 
-                             <iframe style = "height:100% ; visibility:hidden" onload = "this.style.visibility='visible' "
-                               src = "https://drive.google.com/file/d/1rtXXyxIqSS9rWLW4rMWDNGQvG6JG6ck-/preview?usp=sharing">
-                             </iframe>
+                            <audio controls="controls" preload="none">
+                             <source src="https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2024/04/08/15a8002286cc09ef1101cc2dca0f2ce9_6527653312974521313.mp3">
+">
+                             </audio>
                          </td>
                      </tr>
                 </table>

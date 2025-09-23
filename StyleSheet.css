@@ -36,14 +36,14 @@
     height: 20%;
 }
 .personalImage {
-    width: 180px; /* 圖片框寬度 */
-    height: 220px; /* 圖片框高度 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* 超出的部分裁掉 */
+
+    width: 180px;
+    height: 220px;
+    object-fit: contain; /* 保持比例完整顯示 */
+    display: block; /* 確保 <img> 不用 flex */
     background: #eee;
 }
+
 .BackGroundDefine {
     position: fixed;
     width: 100%;
@@ -68,9 +68,8 @@
     text-align: center;
 }
 .March7_Table_right {
-
     background-color: rgb(210, 216, 220, 0.85);
-   
+    
 }
 .March7_Sum_color{
     text-decoration-color:red;

@@ -1,26 +1,24 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Lofu.aspx.cs" Inherits="Lofu" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="omphalos.aspx.cs" Inherits="omphalos" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="StyleSheet.css" rel="stylesheet" type="text/css" />
-    <title> Character of Lofu </title>
+<link href="StyleSheet.css" type="text/css" rel="stylesheet" />
+
+    <title> omphalos </title>
 </head>
 <body>
-    <div style =' background-image:url(https://drive.google.com/file/d/1y8WFDCmpuviYBxhmXNL98-4JrrdTn8hB/view?usp=sharing.jpg)' class="BackGroundDefine">  
-        </div>
     <form id="form1" runat="server">
-    
-        <div>
+                <div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server"
                 ConnectionString="<%$ ConnectionStrings:HonkaiConnectionString2 %>"
                 SelectCommand="SELECT [Name], [belong] , [photoOfCharacter] , [url] FROM [character] AS c 
                                 INNER JOIN  [Planet] AS p ON c.belong = p.planet_ID
                                 WHERE (p.planet_Name = @planetName)">
                 <SelectParameters>
-                    <asp:Parameter DefaultValue="羅浮仙舟" Name="planetName" />
+                    <asp:Parameter DefaultValue="翁法羅斯" Name="planetName" />
                 </SelectParameters>
             </asp:SqlDataSource>
 
@@ -55,7 +53,5 @@
                 </div>
       </div>
     </form>
-
-        
 </body>
 </html>

@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
-    <title></title>
+    <title>Belloberg</title>
 </head>
 <body>
     <div style =' background-image:url(https://i.meee.com.tw/UUvrkt8.jpg)' class="BackGroundDefine">  

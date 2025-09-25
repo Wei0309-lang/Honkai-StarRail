@@ -13,35 +13,37 @@
     <form id="form1" runat="server">
         <div>
 
-            <asp:SqlDataSource ID="SqlDataSourceOfMap" runat="server" ConnectionString='<%$ ConnectionStrings:HonkaiConnectionString %>'
-                SelectCommand="SELECT [planet_Name] , [photo] ,[goto] FROM [Planet]" />
+            <asp:SqlDataSource ID="SqlDataSourceOfMap" runat="server" ConnectionString='<%$ ConnectionStrings:HonkaiStarConnectionString4 %>'
+                SelectCommand="SELECT * FROM [planet]" ProviderName='<%$ ConnectionStrings:HonkaiStarConnectionString4.ProviderName %>' />
 
 
         </div>
 
-        <div  style = "background-image:url('https://i.meee.com.tw/JetgN4e.jpg') ;  top:0px ;" class = "BackGroundDefine" />
+        <div  style = "background-image:url('img/Background/universe.jpg') ;  top:0px ;" class = "BackGroundDefine" ></div>
         <div class="overlay" style ="position:relative ; width:1200px ; height:2000px">
         <div style =" font-size:40px ; color:blue">
             崩壞星穹鐵道地圖:
         </div>
         <div style ="position:center ; height:550px; width:1100px"  >
-            <asp:DataList runat="server" DataSourceID="SqlDataSourceOfMap"
-                 GridLines="Horizontal" RepeatColumns="2"
-                 Width="100%" Height="100%" HorizontalAlign="Center" CssClass="card"
-                 CellPadding="15" BorderWidth="5">
-         
+            <asp:DataList ID="Map_List" runat="server" DataSourceID="SqlDataSourceOfMap"
+                GridLines="Horizontal" RepeatColumns="2"
+                Width="100%" Height="100%" HorizontalAlign="Center" CssClass="card"
+                CellPadding="15" BorderWidth="5px" DataKeyField="planet_ID"  OnItemDataBound="Map_List_ItemDataBound">
+
                 <ItemTemplate>
-                    <asp:LinkButton runat="server" ID="EveryMap"
-                        CommandName="EveryMapClick" CommandArgument='<%# Eval("goto") %>'
-                        OnCommand="EveryMap_Command">
+                    <asp:LinkButton runat="server"  OnCommand="EveryMap_Command" CommandName="MapChoose"  CommandArgument='<%#Eval("goto") %>' >
+
                     星球:
-                    <asp:Label Text='<%# Eval("planet_Name") %>' runat="server" ID="planet_NameLabel" /><br />
-                    <div class="img-box">
-                    <asp:Image runat="server"  CssClass="img-fit"  
-                        ImageUrl=' <%# Eval("photo")%> ' 
-                        Width="450" Height="300"/>
-                    </div>
-                    
+                    <asp:Label Text='<%# Eval("planet_Name") %>' runat="server" ID="planet_NameLabel" />
+                    <br />
+                    <br />
+
+                        <div class="img-box">
+
+                            <asp:Image ID="imgOfplanet" runat="server" CssClass="img-fit"
+                                Width="500" Height="300"/>
+
+                        </div>
                    </asp:LinkButton>
                 </ItemTemplate>
             </asp:DataList>

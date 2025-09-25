@@ -1,15 +1,15 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Kafka.aspx.cs" Inherits="Kafka" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Blade.aspx.cs" Inherits="Blade" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="StyleSheet.css" rel="stylesheet" type="text/css" />
-    <title> Kafka </title>
+<link href="~/StyleSheet.css" type="text/css" rel="stylesheet" />
+    <title>Blade</title>
 </head>
 <body>
-      <div style="position:absolute ; left:550px ; top:1100px">
+         <div style="position:absolute ; left:550px ; top:1100px">
       
      
 
@@ -17,7 +17,7 @@
           SelectCommand="SELECT [Name],[url],[pc],[attribute] FROM [character] WHERE [NAME] = @Name" >
 
           <SelectParameters>
-              <asp:Parameter DefaultValue="卡芙卡" Name="Name"></asp:Parameter>
+              <asp:Parameter DefaultValue="刃" Name="Name"></asp:Parameter>
           </SelectParameters>
       </asp:SqlDataSource>
 
@@ -37,7 +37,7 @@
         <div style =" width:500px "  >
 
             <header style="font-size : 30px">
-                <b>卡芙卡</b>
+                <b>刃</b>
             </header>
             <asp:RadioButtonList runat="server" ID="check" RepeatDirection="Horizontal" 
                 OnSelectedIndexChanged="check_SelectedIndexChanged" 
@@ -64,22 +64,14 @@
              </Triggers>
          </asp:UpdatePanel> 
             
-            <p>古靈精怪的少女，熱衷於這個年紀的女孩子應當「熱衷」的所有事。
+            <p>棄身鋒刃的劍客，原名不詳。</p>
 
-            </p>
-            <p>
-                隨身不離照相機，堅信只要自己跟著列車，終有一天能拍下與過去有關的照片。
-            </p>
+             <p>   效忠於「命運的奴隸」，擁有可怖的自愈能力。</p>
 
-            <p>
-                被列車發現時，她正被封在一塊漂流的恆冰中。
-            </p>
-            <p>
-                少女甦醒後，卻發現自己對身世與過往都一無所知。短暫的消沉之後，她決定以重獲新生的日期為自己命名。
-            </p>
-            <p style ="color:red">
-                這一天，三月七「誕生」了。
-            </p>
+              <p>  手持古劍作戰，劍身遍布破碎裂痕，正如其身，亦如其心。</p>
+
+           
+            
             <p>-----------------------------------------------------------------------------------</p>
         <header style = "text-align:center ; font-size:25px">
             <strong>角色相關經歷</strong>
@@ -88,7 +80,7 @@
             <details>
                 
                 <summary class ="March7_misson">
-                    1.0版本-通往群星的軌道
+                    開拓任務「乘槎馭風仙窟游」
                 </summary>
                     
                 <p style="color:peru">開拓任務「今天是昨天的明天」</p>
@@ -207,41 +199,13 @@
  <asp:FormView runat="server" DataSourceID="SqlDataSource1" >
     <ItemTemplate>
         <table runat="server" id = "Table_March7"    style=" width:310px; border :1px ;  " >
-            <tr>
-                 <td style="position:center">
-
-                     <asp:Button id="March7_1" runat="server" class= "March7_Table_left"  
-                          OnClick="March7_1_Onclick" Text="三月七-存護"
-                          style="width : 100px"/> 
-                     
-                  </td>
-                  <td style="position:center">
-                            
-                       <asp:Button id="March7_2" runat="server" class="March7_Table_left"  
-                            OnClick="March7_2_Onclick" Text="三月七-巡獵"
-                            style="width : 100px"/>
-                                     
-                  </td>
-
-          </tr>
+            
           <tr >
                <td colspan = "2" style =" height:150px">
-                   <asp:UpdatePanel runat="server" UpdateMode="conditional">
 
-                        <ContentTemplate> 
+                          <asp:Image id="img_37" runat="server" ImageUrl = "~" class="personalImage" />
 
-                          <asp:Image id="img_37" runat="server" ImageUrl = "https://i.imgur.com/T0uEVOJ.jpeg" class="personalImage" />
-                                    
-                        </ContentTemplate>
-
-                                <Triggers>
-                                     <asp:AsyncPostBackTrigger ControlID="March7_1" EventName="Click" />
-                                     <asp:AsyncPostBackTrigger ControlID="March7_2" EventName="Click" />
-                                </Triggers>
-
-                       </asp:UpdatePanel>
-
-             </td>
+                </td>
         </tr>
         <tr>
 
@@ -256,7 +220,7 @@
                  </td>
                  <td class="March7_Table_right">
 
-                     三月七
+                     刃
                  </td>
             </tr>
             <tr>
@@ -264,7 +228,7 @@
                      性別:
                  </td>
                  <td class="March7_Table_right">
-                     女性
+                     男性
                  </td>
            </tr>
            <tr>
@@ -326,10 +290,10 @@
                         </td>
                     
                         <td class="March7_Table_right" colspan = "2" style="height:50px ">                        
-                                <iframe   style="width:100% ; height:100% ;
-                                    visibility:hidden" ; onload="this.style.visibility = 'visible' ; "
-                                     src="https://drive.google.com/file/d/1Kdnm4XnSrIKH2G9RZTHBl2xz8-sjneBb/preview?usp=sharing">   
-                                </iframe>                             
+                                <audio preload="none" controls="controls">
+                                    <source src="https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2024/04/08/6c92a4a34bc0ae87d3efe2eec2b2b5c4_3931417828632321322.mp3">
+                                </audio>
+                                                             
                         </td>
                     </tr>
                      <tr>
@@ -340,9 +304,9 @@
                          </td>
                          <td class="March7_Table_right" style="height:50px" colspan = "2">
 
-                             <iframe style = "height:100% ; visibility:hidden" onload = "this.style.visibility='visible' "
-                               src = "https://drive.google.com/file/d/1rtXXyxIqSS9rWLW4rMWDNGQvG6JG6ck-/preview?usp=sharing">
-                             </iframe>
+                             <audio preload="none" controls="controls">
+                                 <source src="https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2024/04/08/c7100c7a8cc3124989f56be3ed6a9d04_3883903909453622083.mp3">
+                            </audio>
                          </td>
                      </tr>
                 </table>
@@ -359,6 +323,5 @@
       
        </div>
     </form>
-        
 </body>
 </html>

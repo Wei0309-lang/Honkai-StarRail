@@ -19,4 +19,20 @@ public partial class Allmap : System.Web.UI.Page
         string MapUrl = e.CommandArgument.ToString();
         Response.Redirect(MapUrl);
     }
+
+   
+
+    protected void Map_List_ItemDataBound(object sender, DataListItemEventArgs e)
+    {
+        if(e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+        {
+            Image image = (Image)e.Item.FindControl("imgOfplanet");
+
+            string filePath = Convert.ToString(DataBinder.Eval(e.Item.DataItem, "planet_PhotoUrl"));
+
+            image.ImageUrl = string.IsNullOrEmpty(filePath)?
+                "~/img/Background/nophoto.png" 
+                :filePath ;
+        }
+    }
 }

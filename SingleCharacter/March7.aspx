@@ -1,30 +1,31 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Blade.aspx.cs" Inherits="Blade" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="March7.aspx.cs" Inherits="March7" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="StyleSheet.css" type="text/css" rel="stylesheet" />
-    <title>Blade</title>
+     <link href ="~/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <title> March7 </title>
 </head>
 <body>
-         <div style="position:absolute ; left:550px ; top:1100px">
+      <div style="position:absolute ; left:550px ; top:1100px">
       
      
 
-      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HonkaiConnectionString %>"
-          SelectCommand="SELECT [Name],[url],[pc],[attribute] FROM [character] WHERE [NAME] = @Name" >
+          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:HonkaiStarConnectionString3 %>'
+              SelectCommand="SELECT [Name], [Path], [url], [pc], [attribute] FROM [character] WHERE ([Name] = @Name)" 
+              ProviderName='<%$ ConnectionStrings:HonkaiStarConnectionString3.ProviderName %>'>
 
-          <SelectParameters>
-              <asp:Parameter DefaultValue="卡芙卡" Name="Name"></asp:Parameter>
+              <SelectParameters>
+                  <asp:Parameter DefaultValue="三月七" Name="Name" Type="String"></asp:Parameter>
           </SelectParameters>
       </asp:SqlDataSource>
 
       
   </div>
     
-    <div  style = "background-image:url('https://i.imgur.com/khDMhQF.jpeg') ;  top:0px ;" class = "BackGroundDefine">
+    <div  style = "background-image:url('/img/Background/March7_Back.jpeg') ;  top:0px ;" class = "BackGroundDefine">
     </div>
     
     
@@ -37,7 +38,7 @@
         <div style =" width:500px "  >
 
             <header style="font-size : 30px">
-                <b>卡芙卡</b>
+                <b>三月七</b>
             </header>
             <asp:RadioButtonList runat="server" ID="check" RepeatDirection="Horizontal" 
                 OnSelectedIndexChanged="check_SelectedIndexChanged" 
@@ -276,7 +277,7 @@
                <td class="March7_Table_right">
 
                    <span style="color:blueviolet">
-                        <asp:Label runat="server" Text='<%#Eval("attribute")%>' />
+                         <asp:Label runat="server" Text='<%#Eval("attribute") + "‧ " + Eval("path")%> ' />
                    </span>      
                    
                 </td>
@@ -350,7 +351,38 @@
       </asp:FormView>
   </div>
     
-                 
+                 <asp:gridview runat="server" ID="gridOfcha" 
+                     style=" border:5px" CssClass="EvegridOfCharyChaList" AutoGenerateColumns="False" 
+                     BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" 
+                     CellPadding="2" DataSourceID="SqlDataSource1" ForeColor="Black" 
+                     GridLines="None" 
+                     OnRowCommand ="gridOfcha_RowCommand">
+                     <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                     <Columns>
+                         <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" Visible="false"
+                            />
+                     <asp:TemplateField>
+                         <ItemTemplate>
+                             <asp:linkbutton id="linkName" runat="server" 
+                                 Text='<%# Eval("Name") %>'                              
+                                 CommandName="GoUrl" 
+                                 CommandArgument='<%# Eval("url") %>'
+                                  >
+
+                             </asp:linkbutton>
+                         </ItemTemplate>
+                     </asp:TemplateField>
+                     </Columns>
+                     <FooterStyle BackColor="Tan" />
+                     <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                     <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+                     <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                     <SortedAscendingCellStyle BackColor="#FAFAE7" />
+                     <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+                     <SortedDescendingCellStyle BackColor="#E1DB9C" />
+                     <SortedDescendingHeaderStyle BackColor="#C2A47B" />
+                    
+                </asp:gridview>
  </div>
 
             
@@ -359,5 +391,6 @@
       
        </div>
     </form>
+        
 </body>
 </html>

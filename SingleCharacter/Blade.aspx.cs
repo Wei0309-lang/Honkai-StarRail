@@ -14,15 +14,7 @@ public partial class Blade : System.Web.UI.Page
 
     }
 
-    protected void March7_1_Onclick(object sender, EventArgs e)
-    {
-        img_37.ImageUrl = "https://i.imgur.com/T0uEVOJ.jpeg";
-    }
-
-    protected void March7_2_Onclick(object sender, EventArgs e)
-    {
-        img_37.ImageUrl = "https://imgur.com/xhZUG32.jpeg";
-    }
+    
 
 
 

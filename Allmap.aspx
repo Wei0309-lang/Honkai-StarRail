@@ -13,13 +13,13 @@
     <form id="form1" runat="server">
         <div>
 
-            <asp:SqlDataSource ID="SqlDataSourceOfMap" runat="server" ConnectionString='<%$ ConnectionStrings:HonkaiStarConnectionString4 %>'
-                SelectCommand="SELECT * FROM [planet]" ProviderName='<%$ ConnectionStrings:HonkaiStarConnectionString4.ProviderName %>' />
+            <asp:SqlDataSource ID="SqlDataSourceOfMap" runat="server" ConnectionString='<%$ ConnectionStrings:HonkaiStarConnectionString %>'
+                SelectCommand="SELECT * FROM [planet]" ProviderName='<%$ ConnectionStrings:HonkaiStarConnectionString.ProviderName %>' />
 
 
         </div>
 
-        <div  style = "background-image:url('img/Background/universe.jpg') ;  top:0px ;" class = "BackGroundDefine" ></div>
+        <div  style = "background-image:url('img/Background/universe.jpg') " class = "BackGroundDefine" ></div>
         <div class="overlay" style ="position:relative ; width:1200px ; height:2000px">
         <div style =" font-size:40px ; color:blue">
             崩壞星穹鐵道地圖:

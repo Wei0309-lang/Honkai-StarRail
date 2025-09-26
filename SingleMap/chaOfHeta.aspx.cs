@@ -18,7 +18,7 @@ public partial class chaOfHeta : System.Web.UI.Page
 
     protected void LinkOfPersonal_Command(object sender, CommandEventArgs e)
     {
-        string url = e.CommandArgument.ToString();
+        string url ="~/"+ e.CommandArgument.ToString();
         Response.Redirect(url);
     }
 

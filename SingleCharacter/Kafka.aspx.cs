@@ -12,7 +12,10 @@ public partial class Kafka : System.Web.UI.Page
         
         UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
 
-
+        if(!IsPostBack)
+        {
+          
+        }
 
     }
 

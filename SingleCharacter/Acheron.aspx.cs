@@ -12,22 +12,26 @@ public partial class Acheron : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
 
-        
+        UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+
+        if (!IsPostBack)
+        {
+
+        }
+
     }
 
-    protected void Achron_before_Click(object sender, EventArgs e)
+
+
+
+
+    protected void check_SelectedIndexChanged(object sender, EventArgs e)
     {
-        Acheron1.ImageUrl = "https://imgur.com/t0ico5A.jpg";
+        have.Text = check.SelectedItem.Text;
     }
 
-    
 
-    protected void Acheron_after_Click(object sender, EventArgs e)
-    {
-        Acheron1.ImageUrl = "https://imgur.com/RnEbhdw.jpg";
-    }
 
 
 }

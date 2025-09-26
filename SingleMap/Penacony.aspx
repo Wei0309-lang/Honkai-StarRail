@@ -15,9 +15,9 @@
     
         <div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server"
-            ConnectionString='<%$ ConnectionStrings:HonkaiStarConnectionString2 %>'
+            ConnectionString='<%$ ConnectionStrings:HonkaiStarConnectionString %>'
             SelectCommand="SELECT [Name], [belong], [url] , [character_photo] FROM [character] WHERE ([belong] = @belong)"
-                ProviderName='<%$ ConnectionStrings:HonkaiStarConnectionString2.ProviderName %>'>
+                ProviderName='<%$ ConnectionStrings:HonkaiStarConnectionString.ProviderName %>'>
              <SelectParameters>
 
          <asp:Parameter DefaultValue="p_04" Name="belong" Type="String" />
@@ -28,23 +28,24 @@
 
 
    
-    <div class ="overlay" style ="position:relative ; width:1300px ; height:2000px">  
+    <div class ="overlay" style ="position:relative ; width:1700px ;  background-color:rgb(0,0,0,0.7) ">  
                 <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1"
-                    RepeatColumns="5" CellPadding="15" CellSpacing="0" GridLines="None" 
+                    RepeatColumns="3" CellPadding="15" CellSpacing="0" GridLines="None" 
                     OnItemDataBound="character_List_ItemDataBound">
+
                 <ItemTemplate>
                     <asp:LinkButton runat="server" ID="LinkOfPersonal"
                     CommandName="GoPersonal" CommandArgument='<%# Eval("url") %>'
-                     OnCommand="LinkOfPersonal_Command">
+                     OnCommand="LinkOfPersonal_Command" ForeColor="#ff66cc">
 
                 <div class="card">
-                <div class="title">名字:
-                    <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
+                <div class="title">
+                    <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>'  />
                 </div>
 
                 <div class="img-box" >
                     <asp:Image runat="server" ID="ImageOfPenocany"
-                        Width="230" Height="325" CssClass="img-fit" />
+                        Width="500" Height="500" CssClass="img-fit" />
 
                 </div>
                  </div>

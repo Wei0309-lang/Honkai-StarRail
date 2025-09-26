@@ -9,23 +9,24 @@
     <title> Kafka </title>
 </head>
 <body>
-      <div style="position:absolute ; left:550px ; top:1100px">
+      
       
      
 
-          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:HonkaiStarConnectionString3 %>'
+          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:HonkaiStarConnectionString %>'
               SelectCommand="SELECT [Name], [Path], [url], [pc], [attribute] FROM [character] WHERE ([Name] = @Name)" 
-              ProviderName='<%$ ConnectionStrings:HonkaiStarConnectionString3.ProviderName %>'>
+              ProviderName='<%$ ConnectionStrings:HonkaiStarConnectionString.ProviderName %>'>
 
               <SelectParameters>
                   <asp:Parameter DefaultValue="卡芙卡" Name="Name" Type="String"></asp:Parameter>
           </SelectParameters>
       </asp:SqlDataSource>
+          
 
       
-  </div>
+  
     
-    <div  style = "background-image:url('https://i.imgur.com/khDMhQF.jpeg') ;  top:0px ;" class = "BackGroundDefine">
+    <div  style = "background-image:url('/img/Background/Hunters_Back .webp') ;  top:0px ;" class = "BackGroundDefine">
     </div>
     
     
@@ -33,7 +34,7 @@
 
     <form id="form1" runat="server">
     <div>
-        <div class ="overlay" style ="position:relative ; width:900px ; height:2000px">
+        <div class ="overlay" style ="position:relative ">
 
         <div style =" width:500px "  >
 
@@ -65,22 +66,17 @@
              </Triggers>
          </asp:UpdatePanel> 
             
-            <p>古靈精怪的少女，熱衷於這個年紀的女孩子應當「熱衷」的所有事。
-
-            </p>
-            <p>
-                隨身不離照相機，堅信只要自己跟著列車，終有一天能拍下與過去有關的照片。
-            </p>
+            <p>在星際和平公司的通緝檔案裡，卡芙卡只留下了名字和「愛好收集大衣」的紀錄。</p>
+                
 
             <p>
-                被列車發現時，她正被封在一塊漂流的恆冰中。
+                人們對這位星核獵手所知甚少，只知道她是「命運的奴隸」艾利歐最信任的成員之一。
             </p>
+
             <p>
-                少女甦醒後，卻發現自己對身世與過往都一無所知。短暫的消沉之後，她決定以重獲新生的日期為自己命名。
+                為了到達艾利歐所預見的「未來」，卡芙卡開始行動。
             </p>
-            <p style ="color:red">
-                這一天，三月七「誕生」了。
-            </p>
+          
             <p>-----------------------------------------------------------------------------------</p>
         <header style = "text-align:center ; font-size:25px">
             <strong>角色相關經歷</strong>
@@ -89,112 +85,118 @@
             <details>
                 
                 <summary class ="March7_misson">
-                    1.0版本-通往群星的軌道
+                    早期
                 </summary>
-                    
-                <p style="color:peru">開拓任務「今天是昨天的明天」</p>
-            星穹列車暫時停靠於空間站「<a href="https://wiki.hoyolab.com/pc/hsr/entry/951?lang=zh-tw">黑塔</a>」期間，空
-                間站遭到了反物質軍團的襲擊。三月和丹恆協助空間站人員撤退至安全區域期間，發現了昏迷的星核容器，而這位容器
-                日後將成為星穹列車上的新成員「開拓者」。
-                三月、丹恆和開拓者在反物質軍團的襲擊下殺出血路，最終解救了受傷的「黑塔」防衛科負責人阿蘭並在姬子的掩護下
-                到達安全區域。眾人撤回星穹列車停靠的月台後遭遇了末日獸。在與末日獸的戰鬥中，開拓者為了保護三月七，臉接末
-                日獸的吐息，途中被「毀滅」星神 納努克 瞥了一眼，體內的星核便爆發出極強的能量將末日獸擊退。在星核進一步爆
-                發時被瓦爾特·楊抑制拐杖敲腦袋，保住了空間站與意識。在三月等人的邀請下，開拓者最終決定加入星穹列車，成為了
-                列車組的一員。
-
-            <p style="color:peru">開拓任務「於枯索的冬夜裡」&「於曈曨的驕陽下」</p>
-               列車抵達星球雅利洛-Ⅵ，卻被星核的力量影響導致列車無法繼續前行，因此姬子委派開拓者、三月七和丹恆登陸雅利洛-Ⅵ尋找星核。
-               經過一系列冒險後，三月等人成功封印了星核，並解決了雅利洛-Ⅵ上的文明貝洛伯格面臨的災難，使貝洛伯格的上層區和下層區重新團結並迎來了新的大守護者。
-            
-            <p style="color:peru">開拓任務「乘槎馭風仙窟游」</p>
-               星穹列車即將躍遷至下一目的地時，星核獵手卡芙卡與列車組展開通訊，告知眾人「羅浮」上也存在著引發危機的星核，三月雖不願遷就星核獵手，但還是出於想要保護無辜的願望同意前往「羅浮」尋找星核。開拓者、三月和瓦爾特一同登陸「羅浮」，由于丹恆和「羅浮」之間的諸多不愉快，因此丹恆沒有和眾人一同在一開始就出發，而是後來才登上「羅浮」。
+                <p>
+                    出生於「天衣五」，一顆因受星核影響，居民不知恐懼為何物、放縱自己的欲望，會墮落成「惡魔」的星球。
+                    卡芙卡曾任「惡魔獵人」，負責逮捕惡魔，但她無法體會到自己生命的價值。在新巴比倫與艾利歐相遇後，
+                    艾利歐承諾會帶給卡芙卡改變，因此卡芙卡加入了星核獵手。之後，卡芙卡救下了在宇宙中漂泊著的，倖存
+                    的格拉默鐵騎流螢，使其也加入星核獵手，以其裝甲「薩姆」的名號開始了星核獵手的活動。
+                    根據艾利歐的指示，卡芙卡和薩姆一同打敗並招募了刃，後又迎來了銀狼的加入。在刃的記憶中，開拓者
+                    （星核的載體）似乎曾與卡芙卡一同行動了很長一段時間，並且為了讓開拓者活下去而付出了許多。
+                    在「耶佩拉叛亂案」發生前，星核獵手已經為了奪取星核而參與了46樁大案。卡芙卡用言靈術操縱隸屬於
+                    「泯滅幫」的耶佩拉判罰官在耶佩拉宮內對自己進行審判，隨後解除了對判罰官的控制並任由前來營救她
+                    的薩姆將四個判罰官殺死。望著叛亂中的耶佩拉，薩姆提醒卡芙卡不要再玩弄獵物，卡芙卡漫不經心地同意。
+                </p>
 
             </details>
-            <p></p>
-            <details>
-                <summary class ="March7_misson">
-                    1.1版本「銀河漫遊」
-                </summary>
-                <p style="color:peru">同行任務「異邦騎士」</p>
-                三月七與瓦爾特、開拓者一起受地衡司委託調查在仙舟上的可疑人士，沒想到可疑人士羅剎的面貌竟與奧托極為神似
-                ，令瓦爾特大吃一驚（給楊叔干出走馬燈了都），隨後提出對此人要著重調查。
-                眾人先調取了機巧鳥的監控片段，看偵探小說入迷的三月自告奮勇便開始對羅剎的行蹤做模擬推演文案全程高能，但
-                由於沒有實際到過現場，三月的推理被楊叔認為充滿漏洞。之後眾人決定親自前往現場查看，剛出門就遇到了說相聲
-                的阿來和阿往兩人，原來二人正是在事發這段時間被羅剎搭救而特地前來致謝，了解事件原委後眾人打消了對羅剎的
-                懷疑。
-                事情告一段落後，地衡司修復了新的監控片段並邀請三月一行人再次前去查看，監控中羅剎面對瘋長的建木，稱自己
-                會解決一切，但在這兩句獨白後片段戛然而止米家經典謎語人劇情，雖然只有短短兩句話，但是卻證明了羅剎的身份
-                和他的目的並不單純。
-                <p style="color:peru">同行任務「霜刃一試」</p>
-                開拓者遇到了似乎有所發現的諦聽，但因為無法與諦聽交流而帶著它一起去找能聽懂諦聽說話的三月。三月吐槽為什
-                麼諦聽沒有來先找她這樣的美少女這裡男女主角可以反吐槽「難道在你眼裡我不是美少女？」男開拓者選此項更是高
-                能。
-                三月將諦聽的話翻譯了出來，原來它在流雲渡港口找到了一些奇怪的東西。兩人迅速前往流雲渡，在某處找到了可疑
-                物品，發現它是雲騎軍彥卿所遺留下的示跡玉扣（全息記錄儀）。兩人翻閱了記錄儀並了解到了彥卿的去向，隨後立
-                即將玉扣交給了景元。
+           <br />
 
-            </details>
-            <p> </p>
             <details>
-                <summary class ="March7_misson">
-                    1.2版本「仙駭有終」
-                </summary>
-                <br />
-                眾人進入被「藥王秘傳」占領的丹鼎司，在符玄的委託下關閉了藥王秘傳用來散布毒煙的藥爐，並擊敗了秘傳魁首丹
-                樞。不料一直以來跟隨大家的「停雲」竟突然發難，露出了真面目——其實為毀滅大君·幻朧捏造的分身。看到陪伴已
-                久的停雲在眼前消散，眾人無不憤慨與感傷，為了阻止幻朧毀滅仙舟的陰謀，開拓者等人決定深入建木所在之處，阻
-                止幻朧。
-                進入建木根系所在的鱗淵境後，眾人與景元和恢復了「飲月君」樣貌的丹恆匯合了，雖然驚訝于丹恆的真實身份，但
-                眾人並不介意。丹恆以「持明龍尊」之力打開了通往建木根系的道路。眾人一同前往龍宮最深處，迎戰幻朧。
-                一番死鬥後，幻朧肉身破滅，神魂逃脫，景元身負重傷。眾人隨雲騎軍回到長樂天修養。
+                <summary class ="March7_misson">開拓任務「今天是昨天的明天」</summary> 
 
-            </details>
-            <p> </p>
+                <p>
+                    在艾利歐的指引之下，卡芙卡前來空間站尋找星核的載體。在空間站門口拉了一會兒隱形的小提琴，趁反物質軍團
+                    進入空間站引發騷亂時進入空間站。和銀狼匯合後一同找到星核的載體，做出了對載體性別的選擇後，將星核注入
+                    載體內，等載體醒來之後，溫柔地和載體告別。
+                </p>
+
+           </details>
+            <br />
+
+               <details>
+                   <summary class="March7_misson">開拓任務「乘槎馭風仙窟游」</summary>
+                   <p>
+                        列車組對雅利洛-VI的開拓告一段落後，以虛影的形式出現在列車上，提出請列車組改變下一站的目的地。最終
+                        經過民主投票，列車組接受了卡芙卡的提議。
+                        列車組來到仙舟「羅浮」、被景元安排捉拿卡芙卡的任務後，卡芙卡在迴星港故意留下線索引列車組追上自己
+                        ，又控制了三名雲騎軍與列車組交手，自己表示「去前面再回」並順帶揶揄了符玄的身高離開。擊敗三名雲騎軍
+                        後，在卡芙卡的誘導下，列車組來到了卡芙卡事先預定的戰場。一番交手後，卡芙卡向天清空彈匣，可從天而降
+                         的符玄依照法眼預測修正了彈道，毫髮無損地「控制」了毫無抵抗意願的卡芙卡。
+                         列車組重啟窮觀陣後，符玄依照諾言押來卡芙卡，在列車團陪審下對其進行審訊。被關押的時候似乎被摘了美瞳
+                       ，可以看見卡芙卡的瞳孔了。符玄啟動窮觀陣，得知卡芙卡所了解的真相後大為震撼，讓列車組成員自行審問卡芙
+                        卡。列車組讓開拓者訊問卡芙卡，但卡芙卡也只是按照艾利歐給出的信息「老實交代」，說出了關於星核獵手在此
+                         次事件的目的與「殺死星神」的事情。
+                         在預定的時間，早已被「巡獵」斫斷的建木重獲新生。卡芙卡掙開仙舟的拘束意欲離開。開拓者想要追捕，卻被刃
+                         攔住。最後卡芙卡與刃從窮觀陣邊緣一躍而下
+                    </p>
+               </details> 
+
+            <br />
+
             <details>
-            <summary class ="March7_misson">
-                1.3版本「天鏡映劫塵」
+            <summary class="March7_misson"> 同行任務·星核獵手「朋克洛德精神」</summary>
+                <p>
+                      在銀狼與黑塔和螺絲咕姆較量失敗，被封禁了76個遊戲帳號後，「安慰」銀狼要其不要再又哭又鬧的了，銀狼：
+                      我沒有又哭又鬧。（哭腔）。在銀狼表示自己要前往庇爾波因特的公司總部去為帳號解封時，卡芙卡表示艾利歐
+                      接下來的劇本里需要自己參與，因此無法陪她同去。
+                </p>
+            </details>
+
+            <br />
+
+            <details>
+                <summary class="March7_misson">
+                    開拓任務「雲樹百丈蔽重樓」
                 </summary>
-                <p style="color:peru"> 開拓任務「劫波渡盡戰雲收」</p>
-                解決了星核之亂後，三月七等人受到符玄委託，將停雲遺留的扇子轉交給馭空。在與開拓者閒聊時，三月七提到自己想
-                借用太卜司的窮觀陣來了解自己的過去。
-                馭空委託三月七等人參加為犧牲者舉辦的「慰靈奠儀」，儀式過後，景元將象徵「結盟之誼」的玉兆送給了列車組。
-                在與熟人們告別後，三月七等人離開了羅浮，準備前往下一個目的地——<a href="https://wiki.hoyolab.com/pc/hsr/entry/1804?lang=zh-tw">匹諾康尼</a>
-                    。
+                <p>
+                    卡芙卡與刃在鱗淵境等候丹恆，放任刃和丹恆、彥卿交手。亂鬥中刃將丹恆逼出了飲月君形態，卡芙卡用言靈術先是
+                    解放了刃的魔陰身，後又強行中止了戰鬥。景元適時來到，因為刃喚起了飲月君有功，所以景元放任卡芙卡和刃離開
+                    。其後卡芙卡的通緝令被景元撤銷了。
+                </p>
+            </details>
+
+            <br />
+
+            <details>
+                <summary class="March7_misson">
+                    同行任務·星核獵手「陌生女人的來信」
+                </summary>
+                 <p>
+                   卡芙卡和刃並未離開仙舟羅浮。她匿名向開拓者發了封求助簡訊，讓開拓者前往太卜司。卡芙卡向開拓者說明了自己
+                     面臨的困境：景元雖然允許二人離開，但只撤銷了卡芙卡的通緝令——刃仍然是最高等級的通緝犯。而且因為刃的
+                     魔陰身加重了，二人不能立刻離開羅浮，而自己雖然能用言靈暫時封印刃的魔陰身，但一心不能二用，在此期間需
+                     要開拓者為她護法。
+                </p>
                 </details>
-            <p> </p>
-            <details>
-                <summary class = " March7_misson ">
-                    1.4版本「冬夢激醒」
-                </summary>
-                <p style="color:peru">開拓序聞·冬夢激醒「未來市場」</p>
-                三月七和開拓者收到布洛妮婭的邀請，到貝洛伯格去參加煦日節，過程中和開拓者等人一起參與並協助化解了貝洛伯格
-                與星際和平公司的債務糾紛。
-
-                <p style="color:peru">冒險任務「星際決勝慶典」</p>
-                三月七和開拓者收到了《乙太戰線》的推銷廣告。 饒有興趣的三月七拉著開拓者來到了貝洛伯格的競技場。 在聽取贊
-                助人喬瓦尼的介紹時，三月七和開拓者注意到幾個公司員工在欺負貝洛伯格的小孩子。 在喬瓦尼的斡旋下，眾人決定以
-                乙太戰線對戰決勝負。 擊敗這幾個自稱「托帕後援團」（火箭隊）的公司員工后，三月七與開拓者得到了這只有自我意
-                識的撲滿乙太靈（皮卡丘），踏上了成為星際決勝慶典冠軍（寶可夢大師）的征途......？
-
-                在奪取四枚徽章（擊敗八大館主）后，三月七和開拓者回到貝洛伯格的決賽競技場，也弄明白了這枚乙太靈的來歷。 在
-                擊敗托帕（現任冠軍）后，艾絲妲（空木博士）也來到競技場，將撲滿乙太靈的歸屬交給開拓者和三月七決定。
-
-                決定了撲滿乙太靈的歸屬后，開拓者和三月七在喬瓦尼的指引下前往永冬嶺，迎戰神秘的高手玩家——虎克。
-                比賽結束后，三月七將會在超連結對決中與開拓者（主角）進行乙太靈對決以決出最終勝負。
-            </details>
+                
+            <br />
+           
             <p>------------------------------------------------------------------------------------</p>
             <header style = "text-align:center ; font-size:25px">
                 <strong>角色相關</strong>
             </header>
             <ul>
                 <li>
-                    三月七未在崩壞系列中的其他作品中登場過，是《崩壞：星穹鐵道》中的原創角色、第一個放出角色PV的角色，
-                    同時也是遊戲的看板娘，遊戲的APP圖標、遊戲界面的角色圖標，連官方社交帳號頭像都是三月七的大頭照。
+                    通過卡芙卡的角色PV「戲劇性反諷」可知，星際和平公司對卡芙卡的懸賞金額為108.99億信用點。
                 </li>
                 <li>
-                    「三月七」這個名字是用來紀念自己在列車上醒來的那天的。甦醒時，三月七把自己是誰、原來叫什麼、來自
-                    哪裡都忘得一乾二淨了。
+                    在卡芙卡剛登場時，她神似瑪奇瑪的眼神讓不少玩家認為她是壞女人。
                 </li>
+                <li>
+                    由於在劇情中主角是被卡芙卡喚醒，許多玩家會稱呼其為媽。
+                </li>
+                <li>
+                    從卡芙卡被捕後審訊的細節可得知，卡芙卡特殊的瞳孔效果是因為佩戴了隱形眼鏡。
+                </li>
+                                       
+                <li>
+                    截至3.3版本，卡芙卡的簡訊均為匿名或借用其他角色的手機發送，也是星核獵手的四位可控角色中
+                    ，唯一一位不使用自己的帳號發送簡訊的角色；也因此無法得知卡芙卡的簡訊簽名。在成為同伴後
+                    的日常簡訊中，她會表示對開拓者的關心。
+                </li>
+
+
             </ul>
             <p>
 
@@ -202,17 +204,17 @@
             </div>
 
             <!--右方Table-->
-           
-<div style="position:absolute ; left:550px ; top:100px" >
 
- <asp:FormView runat="server" DataSourceID="SqlDataSource1" >
-    <ItemTemplate>
-        <table runat="server" id = "Table_March7"    style=" width:310px; border :1px ;  " >
+<div style="position:absolute ; left:600px ; top:80px" >
+
+     <asp:FormView runat="server" ID="formView1" DataSourceID="SqlDataSource1">
+          <ItemTemplate>
+        <table runat="server" id = "Table_March7"    style=" width:380px; border :1px ;  " >
            
           <tr >
                <td colspan = "2" style =" height:400px">
                  
-                <asp:Image id="img_37" runat="server" ImageUrl = "~/img/Personal/Kafkal.png" class="personalImage" />
+                <asp:Image id="img_Kafka" runat="server" ImageUrl = "~/img/Personal/Kafkal.webp" class="personalImage" />
 
              </td>
         </tr>
@@ -249,7 +251,7 @@
                <td class="March7_Table_right">
 
                    <span style="color:blueviolet">
-                        <asp:Label runat="server" Text='<%#Eval("attribute") + "‧ " + Eval("path")%> ' />
+                        <asp:Label runat="server" Text='<%#Convert.ToString( Eval("attribute") )+ "‧" + Eval("path")%>' />
                    </span>      
                    
                 </td>
@@ -261,7 +263,7 @@
          </td>
             <td class="March7_Table_right">
                 
-                <asp:Label runat="server"  Text='<%#Convert.ToBoolean( Eval("pc") )? "是":"否" %>'   />
+                 <asp:Label runat="server"  Text='<%#Convert.ToBoolean( Eval("pc") )? "是":"否" %>'   />
                                                                                   
             </td>
               
@@ -271,10 +273,10 @@
                   配音:
               </td>
               <td class="March7_Table_right">
-                   <a target="_blank" href ="https://zh.moegirl.tw/%E8%AF%BA%E4%BA%9A(%E9%85%8D%E9%9F%B3%E6%BC%94%E5%91%98) " >諾亞（漢語)</a><br />          
-                   <a target="_blank" href="https://zh.wikipedia.org/zh-tw/%E5%B0%8F%E5%80%89%E5%94%AF">小倉唯（日語）</a><br />                          
-                   <a target="_blank" href = "https://en.wikipedia.org/wiki/Skyler_Davenport">Skyler Davenport（英語)</a><br />                        
-                     鄭惠援（韓語)<br /> 
+                   <a target="_blank" href ="https://zh.moegirl.org.cn/%E5%BE%90%E6%85%A7 " >徐慧（漢語)</a><br />          
+                   <a target="_blank" href="https://zh.moegirl.org.cn/%E4%BC%8A%E8%97%A4%E9%9D%99">伊藤靜（日語）</a><br />                          
+                                                                                                    Cheryl Texiera（英語)<br />                        
+                                                                                                    史文英（韓語)<br /> 
               </td>
       </tr>
       <tr>
@@ -282,13 +284,13 @@
               所屬團體:
           </td>
           <td class="March7_Table_right">
-               <a href="https://zh.moegirl.tw/%E6%98%9F%E7%A9%B9%E5%88%97%E8%BD%A6">星核獵手</a>
+               <a href="https://honkai-star-rail.fandom.com/zh/wiki/%E6%98%9F%E6%A0%B8%E7%8C%8E%E6%89%8B?variant=zh-tw">星核獵手</a>
           </td>
       </tr>
 </table>
 
                     <!--配音-->
-                   <div style=" position:relative ; width:350px ; height:250px ; top:20px">
+                   <div style=" position:relative ; width:350px ; height:250px ; top:20px ">
                     
                  <table>
                     <tr>
@@ -300,7 +302,7 @@
                     
                         <td class="March7_Table_right" colspan = "2" style="height:50px ">                        
                                 <audio preload="none" controls="controls">
-                                     <source src="https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2024/04/08/0a38c0ed7f9c52358a05bf8508a1b4af_6339007775909362732.mp3">.mp3">   
+                                     <source src="https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2024/04/08/0a38c0ed7f9c52358a05bf8508a1b4af_6339007775909362732.mp3"/>   
                                 </audio>                          
                         </td>
                     </tr>
@@ -313,23 +315,20 @@
                          <td class="March7_Table_right" style="height:50px" colspan = "2">
 
                           <audio preload="none" controls="controls">
-                            <source src="https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2024/04/08/f53e9b2eb6e3192f1c47b937f4c9ccba_457830365904147467.mp3">   
+                            <source src="https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2024/04/08/f53e9b2eb6e3192f1c47b937f4c9ccba_457830365904147467.mp3"/>   
                          </audio>
                          </td>
                      </tr>
                 </table>
-            </ItemTemplate>
+                 </ItemTemplate>
       </asp:FormView>
-  </div>
-    
-                 
- </div>
 
-            
+
+           </div> 
         
             
-      
-       </div>
+      </div>
+      </div>
     </form>
         
 </body>

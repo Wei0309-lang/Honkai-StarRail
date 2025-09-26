@@ -28,7 +28,7 @@ public partial class Belloberg : System.Web.UI.Page
 
             image.ImageUrl = string.IsNullOrEmpty(filePath) ?
                 "~/img/Personal/nophoto.jpg"
-                : "~" + filePath;
+                :"~" + filePath;
         }
     }
 }

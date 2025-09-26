@@ -13,9 +13,9 @@
       
      
 
-          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:HonkaiStarConnectionString3 %>'
+          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:HonkaiStarConnectionString %>'
               SelectCommand="SELECT [Name], [Path], [url], [pc], [attribute] FROM [character] WHERE ([Name] = @Name)" 
-              ProviderName='<%$ ConnectionStrings:HonkaiStarConnectionString3.ProviderName %>'>
+              ProviderName='<%$ ConnectionStrings:HonkaiStarConnectionString.ProviderName %>'>
 
               <SelectParameters>
                   <asp:Parameter DefaultValue="三月七" Name="Name" Type="String"></asp:Parameter>
@@ -25,15 +25,12 @@
       
   </div>
     
-    <div  style = "background-image:url('/img/Background/March7_Back.jpeg') ;  top:0px ;" class = "BackGroundDefine">
+    <div  style = "background-image:url('/img/Background/March7_Back.jpeg')" class = "BackGroundDefine">
     </div>
-    
-    
-    
 
     <form id="form1" runat="server">
     <div>
-        <div class ="overlay" style ="position:relative ; width:900px ; height:2000px">
+        <div class ="overlay" style ="position:relative">
 
         <div style =" width:500px "  >
 
@@ -203,7 +200,7 @@
 
             <!--右方Table-->
            
-<div style="position:absolute ; left:550px ; top:100px" >
+<div  >
 
  <asp:FormView runat="server" DataSourceID="SqlDataSource1" >
     <ItemTemplate>
@@ -231,7 +228,7 @@
 
                         <ContentTemplate> 
 
-                          <asp:Image id="img_37" runat="server" ImageUrl = "https://i.imgur.com/T0uEVOJ.jpeg" class="personalImage" />
+                          <asp:Image id="img_37" runat="server" ImageUrl = "~/img/Personal/March7_Preservation.webp" class="personalImage" />
                                     
                         </ContentTemplate>
 
@@ -327,10 +324,9 @@
                         </td>
                     
                         <td class="March7_Table_right" colspan = "2" style="height:50px ">                        
-                                <iframe   style="width:100% ; height:100% ;
-                                    visibility:hidden" ; onload="this.style.visibility = 'visible' ; "
-                                     src="https://drive.google.com/file/d/1Kdnm4XnSrIKH2G9RZTHBl2xz8-sjneBb/preview?usp=sharing">   
-                                </iframe>                             
+                               <audio controls="controls" preload="none">
+                                   <source src="https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2024/04/10/ffcb86af1e329304d264f610f29e553f_8678173772140766910.mp3">
+                               </audio>                           
                         </td>
                     </tr>
                      <tr>
@@ -341,9 +337,9 @@
                          </td>
                          <td class="March7_Table_right" style="height:50px" colspan = "2">
 
-                             <iframe style = "height:100% ; visibility:hidden" onload = "this.style.visibility='visible' "
-                               src = "https://drive.google.com/file/d/1rtXXyxIqSS9rWLW4rMWDNGQvG6JG6ck-/preview?usp=sharing">
-                             </iframe>
+                            <audio preload="none" controls="controls">
+                                <source src="https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2024/04/10/8b8437d72db53f466eca07fa27514b4b_8212254793583688222.mp3">
+                            </audio>
                          </td>
                      </tr>
                 </table>
@@ -351,44 +347,13 @@
       </asp:FormView>
   </div>
     
-                 <asp:gridview runat="server" ID="gridOfcha" 
-                     style=" border:5px" CssClass="EvegridOfCharyChaList" AutoGenerateColumns="False" 
-                     BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" 
-                     CellPadding="2" DataSourceID="SqlDataSource1" ForeColor="Black" 
-                     GridLines="None" 
-                     OnRowCommand ="gridOfcha_RowCommand">
-                     <AlternatingRowStyle BackColor="PaleGoldenrod" />
-                     <Columns>
-                         <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" Visible="false"
-                            />
-                     <asp:TemplateField>
-                         <ItemTemplate>
-                             <asp:linkbutton id="linkName" runat="server" 
-                                 Text='<%# Eval("Name") %>'                              
-                                 CommandName="GoUrl" 
-                                 CommandArgument='<%# Eval("url") %>'
-                                  >
-
-                             </asp:linkbutton>
-                         </ItemTemplate>
-                     </asp:TemplateField>
-                     </Columns>
-                     <FooterStyle BackColor="Tan" />
-                     <HeaderStyle BackColor="Tan" Font-Bold="True" />
-                     <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
-                     <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
-                     <SortedAscendingCellStyle BackColor="#FAFAE7" />
-                     <SortedAscendingHeaderStyle BackColor="#DAC09E" />
-                     <SortedDescendingCellStyle BackColor="#E1DB9C" />
-                     <SortedDescendingHeaderStyle BackColor="#C2A47B" />
-                    
-                </asp:gridview>
+               
  </div>
 
             
         
             
-      
+
        </div>
     </form>
         

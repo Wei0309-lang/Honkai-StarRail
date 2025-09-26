@@ -198,12 +198,12 @@
 
  <asp:FormView runat="server" DataSourceID="SqlDataSource1" >
     <ItemTemplate>
-        <table runat="server" id = "Table_March7"    style=" width:310px; border :1px ;  " >
+        <table runat="server" id = "Table_March7"    style=" width:380px; border :1px ;  " >
             
           <tr >
                <td colspan = "2" style =" height:150px">
 
-                          <asp:Image id="img_37" runat="server" ImageUrl = "~" class="personalImage" />
+                          <asp:Image id="img_Blade" runat="server" ImageUrl = "~" class="personalImage" />
 
                 </td>
         </tr>

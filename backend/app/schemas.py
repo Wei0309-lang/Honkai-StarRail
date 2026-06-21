@@ -1,0 +1,31 @@
+from pydantic import BaseModel
+from typing import Optional
+
+
+class CharacterBase(BaseModel):
+    Name: str
+    belong: Optional[str] = None
+    photoOfCharacter: Optional[str] = None
+    url: Optional[str] = None
+    attribute: Optional[str] = None
+    pc: Optional[bool] = False
+
+
+class CharacterOut(CharacterBase):
+    id: int
+
+    class Config:
+        from_attributes = True
+
+
+class PlanetBase(BaseModel):
+    planet_Name: str
+    photo: Optional[str] = None
+    goto: Optional[str] = None
+
+
+class PlanetOut(PlanetBase):
+    planet_ID: int
+
+    class Config:
+        from_attributes = True

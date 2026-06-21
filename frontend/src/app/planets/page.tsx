@@ -3,19 +3,22 @@ import { useEffect, useState } from "react";
 import { getPlanets } from "@/lib/api";
 import type { Planet } from "@/types";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
 export default function AllPlanets() {
   const [planets, setPlanets] = useState<Planet[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     getPlanets()
       .then(setPlanets)
+      .catch(() => setError("無法載入星球資料，請確認後端服務是否正在運行"))
       .finally(() => setLoading(false));
   }, []);
 
   if (loading) return <div className="page"><p>載入中...</p></div>;
+  if (error) return <div className="page"><p style={{ color: "#f87171" }}>{error}</p></div>;
 
   return (
     <div className="page">

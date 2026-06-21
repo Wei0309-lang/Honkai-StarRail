@@ -1,0 +1,7 @@
+{
+  "include": ["app"],
+  "exclude": ["**/__pycache__"],
+  "reportMissingImports": true,
+  "reportMissingModuleSource": false,
+  "pythonVersion": "3.11"
+}

@@ -1,6 +1,7 @@
 {
   "python.defaultInterpreterPath": "python",
   "python.terminal.activateEnvironment": true,
+  "python.analysis.extraPaths": ["./backend"],
   "[python]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "ms-python.python"

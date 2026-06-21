@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from typing import Optional
 
 
@@ -13,9 +13,7 @@ class CharacterBase(BaseModel):
 
 class CharacterOut(CharacterBase):
     id: int
-
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class PlanetBase(BaseModel):
@@ -26,6 +24,4 @@ class PlanetBase(BaseModel):
 
 class PlanetOut(PlanetBase):
     planet_ID: int
-
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

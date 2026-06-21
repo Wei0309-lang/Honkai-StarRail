@@ -5,21 +5,24 @@ import Link from "next/link";
 import { getCharacterById } from "@/lib/api";
 import type { Character } from "@/types";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
 export default function CharacterDetail() {
   const params = useParams<{ id: string }>();
   const [character, setCharacter] = useState<Character | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!params.id) return;
     getCharacterById(Number(params.id))
       .then(setCharacter)
+      .catch(() => setError("無法載入角色資料"))
       .finally(() => setLoading(false));
   }, [params.id]);
 
   if (loading) return <div className="page"><p>載入中...</p></div>;
+  if (error) return <div className="page"><p style={{ color: "#f87171" }}>{error}</p></div>;
   if (!character) return <div className="page"><p>找不到角色</p></div>;
 
   return (
